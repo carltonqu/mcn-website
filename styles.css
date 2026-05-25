@@ -1946,55 +1946,6 @@ body {
     min-height: 120px;
 }
 
-/* Section Wave Decorations */
-.section-waves {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
-}
-
-.wave-container {
-    position: absolute;
-    width: 250px;
-    height: 100%;
-}
-
-.wave-container-left {
-    left: 0;
-}
-
-.wave-container-right {
-    right: 0;
-}
-
-.wave-path {
-    fill: none;
-    stroke-linecap: round;
-}
-
-/* Wave 1 - Highest opacity */
-.wave-path-1 {
-    stroke: rgba(212, 168, 83, 0.5);
-    stroke-width: 2;
-}
-
-/* Wave 2 - Medium opacity */
-.wave-path-2 {
-    stroke: rgba(212, 168, 83, 0.3);
-    stroke-width: 1.5;
-}
-
-/* Wave 3 - Lowest opacity */
-.wave-path-3 {
-    stroke: rgba(212, 168, 83, 0.15);
-    stroke-width: 1;
-}
-
 /* Footer */
 .footer {
     background: var(--dark);
