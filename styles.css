@@ -1954,26 +1954,26 @@ body {
     right: 0;
     bottom: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
     overflow: hidden;
 }
 
 .wave-left,
 .wave-right {
     position: absolute;
-    width: 200px;
+    width: 300px;
     height: 100%;
-    opacity: 0.15;
+    opacity: 0.4;
 }
 
 .wave-left {
     left: 0;
-    background: linear-gradient(to right, rgba(212, 168, 83, 0.1), transparent);
+    background: linear-gradient(to right, rgba(212, 168, 83, 0.15), transparent 80%);
 }
 
 .wave-right {
     right: 0;
-    background: linear-gradient(to left, rgba(212, 168, 83, 0.1), transparent);
+    background: linear-gradient(to left, rgba(212, 168, 83, 0.15), transparent 80%);
 }
 
 .wave-left svg,
@@ -1983,8 +1983,8 @@ body {
 }
 
 .wave-line {
-    stroke: rgba(212, 168, 83, 0.4);
-    stroke-width: 1;
+    stroke: rgba(212, 168, 83, 0.6);
+    stroke-width: 1.5;
     fill: none;
     stroke-linecap: round;
 }
