@@ -100,4 +100,77 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+    // Hero Grid Line Effect on Hover
+    const hero = document.querySelector('.hero');
+    const heroGridLines = document.querySelector('.hero-grid-lines');
+    
+    if (hero && heroGridLines) {
+        // Create horizontal and vertical lines
+        const gridSize = 60; // matches CSS background-size
+        const heroRect = hero.getBoundingClientRect();
+        const numHorizontal = Math.ceil(heroRect.height / gridSize);
+        const numVertical = Math.ceil(heroRect.width / gridSize);
+        
+        // Create horizontal lines
+        for (let i = 0; i <= numHorizontal; i++) {
+            const line = document.createElement('div');
+            line.className = 'grid-line-h';
+            line.style.top = (i * gridSize) + 'px';
+            heroGridLines.appendChild(line);
+        }
+        
+        // Create vertical lines
+        for (let i = 0; i <= numVertical; i++) {
+            const line = document.createElement('div');
+            line.className = 'grid-line-v';
+            line.style.left = (i * gridSize) + 'px';
+            heroGridLines.appendChild(line);
+        }
+        
+        // Mouse move effect - highlight lines near cursor
+        hero.addEventListener('mousemove', function(e) {
+            const rect = hero.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const linesH = heroGridLines.querySelectorAll('.grid-line-h');
+            const linesV = heroGridLines.querySelectorAll('.grid-line-v');
+            
+            linesH.forEach(line => {
+                const lineY = parseInt(line.style.top);
+                const distance = Math.abs(y - lineY);
+                if (distance < 100) {
+                    const opacity = 1 - (distance / 100);
+                    line.style.background = `rgba(212, 168, 83, ${opacity * 0.4})`;
+                    line.style.boxShadow = `0 0 ${opacity * 20}px rgba(212, 168, 83, ${opacity * 0.6})`;
+                } else {
+                    line.style.background = 'transparent';
+                    line.style.boxShadow = 'none';
+                }
+            });
+            
+            linesV.forEach(line => {
+                const lineX = parseInt(line.style.left);
+                const distance = Math.abs(x - lineX);
+                if (distance < 100) {
+                    const opacity = 1 - (distance / 100);
+                    line.style.background = `rgba(212, 168, 83, ${opacity * 0.4})`;
+                    line.style.boxShadow = `0 0 ${opacity * 20}px rgba(212, 168, 83, ${opacity * 0.6})`;
+                } else {
+                    line.style.background = 'transparent';
+                    line.style.boxShadow = 'none';
+                }
+            });
+        });
+        
+        // Reset on mouse leave
+        hero.addEventListener('mouseleave', function() {
+            const lines = heroGridLines.querySelectorAll('.grid-line-h, .grid-line-v');
+            lines.forEach(line => {
+                line.style.background = 'transparent';
+                line.style.boxShadow = 'none';
+            });
+        });
+    }
 });

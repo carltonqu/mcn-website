@@ -108,6 +108,58 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
+}
+
+/* Grid Pattern Background */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(212, 168, 83, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 168, 83, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Grid Line Effect on Hover */
+.hero-grid-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+.grid-line-h,
+.grid-line-v {
+    position: absolute;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.grid-line-h {
+    width: 100%;
+    height: 1px;
+    left: 0;
+}
+
+.grid-line-v {
+    width: 1px;
+    height: 100%;
+    top: 0;
+}
+
+.hero:hover .grid-line-h,
+.hero:hover .grid-line-v {
+    background: rgba(212, 168, 83, 0.15);
 }
 
 .hero::before {
@@ -120,6 +172,7 @@ body {
     height: 50%;
     background: radial-gradient(ellipse at center bottom, rgba(212, 168, 83, 0.15) 0%, transparent 70%);
     pointer-events: none;
+    z-index: 2;
 }
 
 .hero .container {
