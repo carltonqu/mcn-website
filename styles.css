@@ -1621,6 +1621,51 @@ body {
     height: auto;
 }
 
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background: var(--dark);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--white);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    font-size: 15px;
+    color: var(--gray-light);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.cta-button-large {
+    background: var(--gold-gradient);
+    color: var(--dark);
+    border: none;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(212, 168, 83, 0.3);
+}
+
+.cta-button-large:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212, 168, 83, 0.5);
+}
+
 /* Featured Section */
 .featured-section {
     padding: 100px 0;
@@ -1724,7 +1769,7 @@ body {
 /* About Section */
 .about {
     padding: 120px 0;
-    background: var(--white);
+    background: var(--dark);
 }
 
 .about-grid {
@@ -1735,7 +1780,8 @@ body {
 
 .about-card {
     padding: 40px;
-    background: var(--light);
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(212, 168, 83, 0.2);
     border-radius: 16px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -1753,19 +1799,21 @@ body {
 
 .about-card h3 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 12px;
+    color: var(--white);
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 .about-card p {
-    color: var(--gray);
+    color: var(--gray-light);
     line-height: 1.7;
 }
 
 /* Services Section */
 .services {
     padding: 120px 0;
-    background: var(--light);
+    background: var(--dark);
 }
 
 .services-list {
@@ -1775,7 +1823,8 @@ body {
 }
 
 .service-item {
-    background: var(--white);
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(212, 168, 83, 0.2);
     padding: 40px;
     border-radius: 16px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -1788,20 +1837,21 @@ body {
 
 .service-item h3 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 12px;
-    color: var(--primary);
+    color: var(--gold);
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 .service-item p {
-    color: var(--gray);
+    color: var(--gray-light);
     line-height: 1.7;
 }
 
 /* Creators Section */
 .creators {
     padding: 120px 0;
-    background: var(--white);
+    background: var(--dark);
 }
 
 .creators-grid {
@@ -1813,7 +1863,8 @@ body {
 .creator-card {
     text-align: center;
     padding: 32px;
-    background: var(--light);
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(212, 168, 83, 0.2);
     border-radius: 16px;
     transition: transform 0.3s;
 }
@@ -1832,12 +1883,14 @@ body {
 
 .creator-card h3 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 4px;
+    color: var(--white);
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 .creator-card p {
-    color: var(--gray);
+    color: var(--gray-light);
     font-size: 14px;
     margin-bottom: 8px;
 }
@@ -1855,7 +1908,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 120px 0;
-    background: var(--light);
+    background: var(--dark);
 }
 
 .contact-form {
@@ -1872,11 +1925,12 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 16px 20px;
-    border: 2px solid transparent;
+    border: 1px solid rgba(212, 168, 83, 0.3);
     border-radius: 12px;
     font-size: 16px;
     font-family: inherit;
-    background: var(--white);
+    background: rgba(26, 26, 26, 0.8);
+    color: var(--white);
     transition: border-color 0.3s;
 }
 
@@ -1884,7 +1938,7 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary);
+    border-color: var(--gold);
 }
 
 .form-group textarea {
