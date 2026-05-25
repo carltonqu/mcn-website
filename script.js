@@ -174,71 +174,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Challenges Section Grid Line Effect
+    // Challenges Section Water Drop Ripple Effect
     const challengesHero = document.querySelector('.challenges-hero');
-    const challengesGridLines = document.querySelector('.challenges-grid-lines');
+    const rippleContainer = document.querySelector('.water-ripple-container');
     
-    if (challengesHero && challengesGridLines) {
-        const gridSize = 40;
-        const heroRect = challengesHero.getBoundingClientRect();
-        const numHorizontal = Math.ceil(heroRect.height / gridSize);
-        const numVertical = Math.ceil(heroRect.width / gridSize);
-        
-        for (let i = 0; i <= numHorizontal; i++) {
-            const line = document.createElement('div');
-            line.className = 'challenges-line-h';
-            line.style.top = (i * gridSize) + 'px';
-            challengesGridLines.appendChild(line);
-        }
-        
-        for (let i = 0; i <= numVertical; i++) {
-            const line = document.createElement('div');
-            line.className = 'challenges-line-v';
-            line.style.left = (i * gridSize) + 'px';
-            challengesGridLines.appendChild(line);
-        }
+    if (challengesHero && rippleContainer) {
+        let lastRippleTime = 0;
+        const rippleDelay = 150; // Minimum delay between ripples in ms
         
         challengesHero.addEventListener('mousemove', function(e) {
+            const currentTime = Date.now();
+            if (currentTime - lastRippleTime < rippleDelay) return;
+            
             const rect = challengesHero.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             
-            const linesH = challengesGridLines.querySelectorAll('.challenges-line-h');
-            const linesV = challengesGridLines.querySelectorAll('.challenges-line-v');
-            
-            linesH.forEach(line => {
-                const lineY = parseInt(line.style.top);
-                const distance = Math.abs(y - lineY);
-                if (distance < 80) {
-                    const opacity = 1 - (distance / 80);
-                    line.style.background = `rgba(212, 168, 83, ${opacity * 0.5})`;
-                    line.style.boxShadow = `0 0 ${opacity * 15}px rgba(212, 168, 83, ${opacity * 0.8})`;
-                } else {
-                    line.style.background = 'transparent';
-                    line.style.boxShadow = 'none';
-                }
-            });
-            
-            linesV.forEach(line => {
-                const lineX = parseInt(line.style.left);
-                const distance = Math.abs(x - lineX);
-                if (distance < 80) {
-                    const opacity = 1 - (distance / 80);
-                    line.style.background = `rgba(212, 168, 83, ${opacity * 0.5})`;
-                    line.style.boxShadow = `0 0 ${opacity * 15}px rgba(212, 168, 83, ${opacity * 0.8})`;
-                } else {
-                    line.style.background = 'transparent';
-                    line.style.boxShadow = 'none';
-                }
-            });
+            createRipple(x, y);
+            lastRippleTime = currentTime;
         });
         
-        challengesHero.addEventListener('mouseleave', function() {
-            const lines = challengesGridLines.querySelectorAll('.challenges-line-h, .challenges-line-v');
-            lines.forEach(line => {
-                line.style.background = 'transparent';
-                line.style.boxShadow = 'none';
-            });
-        });
+        function createRipple(x, y) {
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.style.width = '50px';
+            ripple.style.height = '50px';
+            
+            rippleContainer.appendChild(ripple);
+            
+            // Remove ripple after animation completes
+            setTimeout(() => {
+                if (ripple.parentNode) {
+                    ripple.remove();
+                }
+            }, 2000);
+        }
+        
+        // Add random ambient ripples
+        setInterval(() => {
+            if (Math.random() > 0.7) {
+                const rect = challengesHero.getBoundingClientRect();
+                const x = Math.random() * rect.width;
+                const y = Math.random() * rect.height;
+                createRipple(x, y);
+            }
+        }, 2000);
     }
 });

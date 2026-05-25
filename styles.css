@@ -287,20 +287,38 @@ body {
     overflow: hidden;
 }
 
-/* Grid Pattern for Challenges Section */
-.challenges-hero::after {
-    content: '';
+/* Water Drop Ripple Effect Container */
+.water-ripple-container {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-        linear-gradient(rgba(212, 168, 83, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212, 168, 83, 0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
+    z-index: 1;
     pointer-events: none;
-    z-index: 0;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 168, 83, 0.3);
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple-expand 2s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes ripple-expand {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.8;
+        border-width: 2px;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+        border-width: 0;
+    }
 }
 
 .challenges-hero::before {
@@ -479,35 +497,7 @@ body {
     100% { transform: scale(1.5); opacity: 0; }
 }
 
-/* Grid Lines for Hover Effect */
-.challenges-grid-lines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    pointer-events: auto;
-}
 
-.challenges-line-h,
-.challenges-line-v {
-    position: absolute;
-    background: transparent;
-    transition: all 0.3s ease;
-}
-
-.challenges-line-h {
-    width: 100%;
-    height: 1px;
-    left: 0;
-}
-
-.challenges-line-v {
-    width: 1px;
-    height: 100%;
-    top: 0;
-}
 
 /* Pain Points Cards */
 .pain-points {
