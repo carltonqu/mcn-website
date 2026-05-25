@@ -208,6 +208,61 @@ body {
     color: var(--gray);
 }
 
+/* Partnerships Section */
+.partnerships {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.partnerships-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.partnerships-left h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #1a1a1a;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin-bottom: 12px;
+}
+
+.partnerships-left p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.partnerships-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.partner-logo-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    transition: all 0.3s ease;
+}
+
+.partner-logo-card:hover {
+    border-color: #d4a853;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.partner-logo-card svg {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Challenges Section */
 .challenges {
     background: var(--dark);
