@@ -27,7 +27,9 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--dark);
-    background: var(--white);
+    background: var(--dark);
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -265,6 +267,7 @@ body {
 .challenges {
     background: var(--dark);
     padding: 0;
+    margin: 0;
 }
 
 .challenges .container {
@@ -1428,6 +1431,7 @@ body {
 .trusted-clients {
     padding: 100px 0;
     background: var(--dark);
+    margin: 0;
 }
 
 .clients-header {
