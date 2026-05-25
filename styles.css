@@ -1179,6 +1179,105 @@ body {
     line-height: 1.6;
 }
 
+/* Areas of Recruitment Section */
+.areas-recruitment {
+    padding: 100px 0;
+    background: var(--dark);
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.areas-left {
+    padding-top: 20px;
+}
+
+.areas-left h2 {
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--white);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin-bottom: 20px;
+}
+
+.areas-left p {
+    font-size: 15px;
+    color: var(--gray-light);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.areas-cta {
+    background: var(--gold-gradient);
+    color: var(--dark);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(212, 168, 83, 0.3);
+}
+
+.areas-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212, 168, 83, 0.5);
+}
+
+.areas-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.area-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(212, 168, 83, 0.3);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.area-card:hover {
+    border-color: rgba(212, 168, 83, 0.6);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(212, 168, 83, 0.15);
+}
+
+.area-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(212, 168, 83, 0.1);
+    border: 1px solid rgba(212, 168, 83, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+.area-content h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 8px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.area-content p {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
 /* Featured Section */
 .featured-section {
     padding: 100px 0;
