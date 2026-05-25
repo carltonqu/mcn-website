@@ -1278,6 +1278,67 @@ body {
     line-height: 1.5;
 }
 
+/* Trusted Clients Section */
+.trusted-clients {
+    padding: 100px 0;
+    background: var(--dark);
+}
+
+.clients-header {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.clients-header h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--white);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin-bottom: 12px;
+}
+
+.clients-header p {
+    font-size: 15px;
+    color: var(--gray-light);
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.client-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(212, 168, 83, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    transition: all 0.3s ease;
+}
+
+.client-card:hover {
+    border-color: rgba(212, 168, 83, 0.6);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(212, 168, 83, 0.15);
+}
+
+.client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-logo svg {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Featured Section */
 .featured-section {
     padding: 100px 0;
