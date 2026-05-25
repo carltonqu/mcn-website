@@ -492,7 +492,7 @@ body {
 .growth-content h3 {
     font-size: 28px;
     font-weight: 600;
-    color: var(--white);
+    color: rgba(212, 168, 83, 0.95);
     margin-bottom: 16px;
 }
 
@@ -599,7 +599,7 @@ body {
 .card-title {
     font-size: 16px;
     font-weight: 600;
-    color: var(--white);
+    color: rgba(212, 168, 83, 0.9);
 }
 
 .card-body {
@@ -644,7 +644,7 @@ body {
 .candidate-name {
     font-size: 13px;
     font-weight: 500;
-    color: var(--white);
+    color: rgba(212, 168, 83, 0.85);
 }
 
 .candidate-role {
@@ -722,7 +722,7 @@ body {
 }
 
 .savings-total span {
-    color: var(--white);
+    color: rgba(212, 168, 83, 0.9);
     font-weight: 600;
 }
 
@@ -785,7 +785,7 @@ body {
 .step-name {
     font-size: 13px;
     font-weight: 500;
-    color: var(--white);
+    color: rgba(212, 168, 83, 0.85);
 }
 
 .step-count {
