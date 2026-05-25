@@ -503,20 +503,309 @@ body {
 }
 
 .growth-visual {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.growth-visual img {
+/* Feature Cards */
+.feature-card {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 20px;
     width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.4s ease;
+    max-width: 360px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.growth-block:hover .growth-visual img {
-    transform: scale(1.02);
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.card-icon.purple {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.card-icon.green {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.card-icon.blue {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    flex: 1;
+}
+
+.card-check {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+}
+
+.card-body {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+/* Candidate Rows */
+.candidate-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.candidate-row:last-child {
+    border-bottom: none;
+}
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.check-icon.green {
+    background: #10b981;
+    color: white;
+}
+
+.check-icon.gray {
+    background: #e5e7eb;
+    color: #9ca3af;
+}
+
+.candidate-info {
+    flex: 1;
+}
+
+.candidate-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.candidate-role {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.match-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: #d1fae5;
+    color: #059669;
+}
+
+.match-badge.low {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.match-badge.medium {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+/* Savings Chart */
+.savings-chart {
+    padding: 8px 0;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.chart-label {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.chart-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.bar-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 80px;
+    margin-bottom: 16px;
+    gap: 8px;
+}
+
+.bar-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.bar-label {
+    font-size: 10px;
+    color: #9ca3af;
+}
+
+.bar-track {
+    width: 100%;
+    height: 60px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+    border-radius: 4px;
+    transition: height 0.5s ease;
+}
+
+.bar-fill.gold {
+    background: linear-gradient(180deg, #d4a853 0%, #b8943f 100%);
+}
+
+.savings-metrics {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid #f3f4f6;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.metric-label {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.metric-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.metric-label.success {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.metric-sublabel {
+    font-size: 10px;
+    color: #9ca3af;
+}
+
+/* Pipeline Flow */
+.pipeline-flow {
+    padding: 8px 0;
+}
+
+.pipeline-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.step-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.pipeline-step.completed .step-icon {
+    background: #10b981;
+    color: white;
+}
+
+.pipeline-step.active .step-icon {
+    background: #3b82f6;
+    color: white;
+}
+
+.pipeline-step.pending .step-icon {
+    background: #e5e7eb;
+    color: #9ca3af;
+}
+
+.step-info {
+    flex: 1;
+}
+
+.step-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.step-count {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.pipeline-connector {
+    width: 2px;
+    height: 20px;
+    background: #10b981;
+    margin-left: 13px;
+}
+
+.pipeline-connector.dashed {
+    background: repeating-linear-gradient(
+        to bottom,
+        #d1d5db 0px,
+        #d1d5db 4px,
+        transparent 4px,
+        transparent 8px
+    );
 }
 
 /* About Section */
