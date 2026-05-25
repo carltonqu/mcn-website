@@ -1204,6 +1204,106 @@ body {
     margin-top: 4px;
 }
 
+/* Featured Section */
+.featured-section {
+    padding: 100px 0;
+    background: var(--dark);
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.featured-left {
+    padding-top: 20px;
+}
+
+.featured-title {
+    font-size: 52px;
+    font-weight: 400;
+    color: var(--white);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.featured-subtitle h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.featured-subtitle p {
+    font-size: 15px;
+    color: var(--gray-light);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.featured-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(212, 168, 83, 0.05);
+}
+
+.feature-item.highlighted {
+    background: rgba(212, 168, 83, 0.1);
+    border: 1px solid rgba(212, 168, 83, 0.3);
+}
+
+.feature-item.highlighted .feature-check {
+    background: var(--gold-gradient);
+    border-color: var(--gold);
+    color: var(--dark);
+    box-shadow: 0 4px 20px rgba(212, 168, 83, 0.4);
+}
+
+.feature-check {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.feature-text h4 {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 8px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.feature-text p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
 /* About Section */
 .about {
     padding: 120px 0;
