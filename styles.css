@@ -30,15 +30,331 @@
 
 /* Light mode */
 [data-theme="light"] {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-card: rgba(255, 255, 255, 0.9);
-    --text-primary: #111827;
-    --text-secondary: #374151;
-    --text-muted: #6b7280;
-    --border-color: rgba(212, 168, 83, 0.4);
-    --dark: #f8fafc;
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #333333;
+    --text-muted: #555555;
+    --border-color: rgba(180, 140, 60, 0.5);
+    --dark: #f5f5f5;
     --dark-light: #ffffff;
+    --gray: #444444;
+    --gray-light: #666666;
+}
+
+/* Light mode specific overrides for better contrast */
+[data-theme="light"] body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .navbar {
+    background: rgba(245, 245, 245, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .nav-links a {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+[data-theme="light"] .nav-links a:hover {
+    color: #b8943f;
+}
+
+[data-theme="light"] .hero {
+    background: linear-gradient(135deg, #e8e8e8 0%, #f0f0f0 50%, #e0e0e0 100%);
+}
+
+[data-theme="light"] .hero::after {
+    background-image: 
+        linear-gradient(rgba(180, 140, 60, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(180, 140, 60, 0.08) 1px, transparent 1px);
+}
+
+[data-theme="light"] .hero-content h1 {
+    color: var(--text-primary);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .hero-subtitle {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .challenges-hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    border: 2px solid rgba(180, 140, 60, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .challenges-content h2 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .challenges-content p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .pain-point-card {
+    background: var(--bg-card);
+    border: 2px solid rgba(180, 140, 60, 0.25);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .pain-point-content h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .pain-point-content p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .growth-block {
+    background: var(--bg-card);
+    border: 2px solid rgba(180, 140, 60, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .growth-content h3 {
+    color: #b8943f;
+}
+
+[data-theme="light"] .growth-content p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .feature-card {
+    background: var(--bg-card);
+    border: 2px solid rgba(180, 140, 60, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .card-title {
+    color: #b8943f;
+}
+
+[data-theme="light"] .candidate-name,
+[data-theme="light"] .step-name,
+[data-theme="light"] .chart-value,
+[data-theme="light"] .metric-value {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .candidate-role,
+[data-theme="light"] .step-count,
+[data-theme="light"] .chart-label,
+[data-theme="light"] .metric-label {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .step-circle {
+    background: rgba(180, 140, 60, 0.15);
+    border: 2px solid rgba(180, 140, 60, 0.4);
+    color: #b8943f;
+}
+
+[data-theme="light"] .step-circle:hover,
+[data-theme="light"] .timeline-step:hover .step-circle {
+    background: #d4a853;
+    border-color: #d4a853;
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .step-content h4 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .step-content p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .area-card {
+    background: var(--bg-card);
+    border: 2px solid rgba(180, 140, 60, 0.25);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .area-content h4 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .area-content p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .client-card {
+    background: var(--bg-card);
+    border: 2px solid rgba(180, 140, 60, 0.25);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .clients-header h2 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .clients-header p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .contact-section {
+    background: var(--bg-primary);
+}
+
+[data-theme="light"] .contact-content h2 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .contact-content p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group textarea {
+    background: var(--bg-card);
+    border: 2px solid rgba(180, 140, 60, 0.3);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .form-group input::placeholder,
+[data-theme="light"] .form-group textarea::placeholder {
+    color: #888888;
+}
+
+[data-theme="light"] .form-group input:focus,
+[data-theme="light"] .form-group textarea:focus {
+    border-color: #d4a853;
+    box-shadow: 0 0 0 4px rgba(212, 168, 83, 0.15);
+}
+
+[data-theme="light"] .featured-section {
+    background: var(--bg-primary);
+}
+
+[data-theme="light"] .featured-title {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .featured-subtitle h4 {
+    color: #b8943f;
+}
+
+[data-theme="light"] .featured-subtitle p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .feature-item {
+    background: var(--bg-card);
+    border: 1px solid rgba(180, 140, 60, 0.2);
+    border-radius: 12px;
+}
+
+[data-theme="light"] .feature-item.highlighted {
+    background: rgba(212, 168, 83, 0.15);
+    border: 2px solid rgba(212, 168, 83, 0.4);
+}
+
+[data-theme="light"] .feature-text h4 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .feature-text p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .feature-check {
+    background: rgba(180, 140, 60, 0.15);
+    border: 2px solid rgba(180, 140, 60, 0.4);
+    color: #b8943f;
+}
+
+[data-theme="light"] .feature-item.highlighted .feature-check {
+    background: #d4a853;
+    border-color: #d4a853;
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .footer {
+    background: #e8e8e8;
+    border-top: 2px solid rgba(180, 140, 60, 0.2);
+}
+
+[data-theme="light"] .footer-brand h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .footer-brand p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .link-group h4 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .link-group a {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .link-group a:hover {
+    color: #b8943f;
+}
+
+[data-theme="light"] .footer-bottom {
+    border-top: 1px solid rgba(180, 140, 60, 0.2);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .section-header h2,
+[data-theme="light"] .how-it-works-header h2,
+[data-theme="light"] .areas-left h2 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .section-header p,
+[data-theme="light"] .how-it-works-header p,
+[data-theme="light"] .areas-left p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .about-card,
+[data-theme="light"] .service-item,
+[data-theme="light"] .creator-card {
+    background: var(--bg-card);
+    border: 2px solid rgba(180, 140, 60, 0.25);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .about-card h3,
+[data-theme="light"] .service-item h3,
+[data-theme="light"] .creator-card h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .about-card p,
+[data-theme="light"] .service-item p,
+[data-theme="light"] .creator-card p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .btn-secondary {
+    border: 2px solid #b8943f;
+    color: #b8943f;
+}
+
+[data-theme="light"] .btn-secondary:hover {
+    background: #d4a853;
+    color: #1a1a1a;
+    border-color: #d4a853;
+}
+
+[data-theme="light"] .theme-toggle {
+    border: 2px solid #b8943f;
+    color: #b8943f;
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    background: #d4a853;
+    color: #1a1a1a;
 }
 
 html {
