@@ -308,6 +308,27 @@
     color: var(--text-primary);
 }
 
+.footer-logo-svg {
+    height: 45px;
+    width: auto;
+    margin-bottom: 16px;
+    color: #d4a853;
+}
+
+.footer-logo-letters,
+.footer-logo-arrow,
+.footer-logo-tagline {
+    fill: currentColor;
+}
+
+[data-theme="light"] .footer-logo-svg {
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .footer-logo-svg:hover {
+    color: #b8943f;
+}
+
 [data-theme="light"] .footer-brand p {
     color: var(--text-secondary);
 }
@@ -2119,7 +2140,7 @@ body {
 
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
