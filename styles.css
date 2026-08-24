@@ -429,6 +429,33 @@ body {
     width: auto;
 }
 
+.logo-svg {
+    height: 50px;
+    width: auto;
+    color: #d4a853;
+}
+
+.logo-letters {
+    fill: currentColor;
+}
+
+.logo-arrow {
+    fill: currentColor;
+}
+
+.logo-tagline {
+    fill: currentColor;
+}
+
+/* Light mode logo colors */
+[data-theme="light"] .logo-svg {
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .logo:hover .logo-svg {
+    color: #b8943f;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
